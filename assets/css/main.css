@@ -1,21 +1,24 @@
 @import './base.css';
+
 body {
     font-family: var(--mainFont);
 }
-.menue{
+
+.menue {
     display: none;
 }
+
 .header {
     background-color: #FFFFFF;
     padding: 20px 0px;
-
+   
 }
 
 .header .logo {
     display: flex;
     align-items: center;
     gap: 2px;
-    
+
 }
 
 .header .logo img {
@@ -29,14 +32,15 @@ body {
 .navbar ul {
     display: flex;
     gap: 20px;
-   
+
 }
 
 .navbar ul li a {
     color: #101928;
 
 }
-.active{
+
+.active {
     font-weight: 900;
 }
 
@@ -44,7 +48,7 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
- 
+
 }
 
 .auth a {
@@ -63,48 +67,139 @@ body {
     background-color: var(--mainColor);
     color: #FFFFFF;
 }
-@media screen and (max-width:985px){
-   .header .navbar{
+
+@media screen and (max-width:985px) {
+    .header .navbar {
         display: none;
     }
-    .auth{
+
+    .auth {
         display: none;
     }
-   
-    .menue{
+
+    .menue {
         display: block;
-        order:2;
+        order: 2;
     }
 }
+
 @media screen and (max-width:576px) {
-    .container{
+    .container {
         width: calc(100%-50px);
     }
-    .header .logo img{
-        width:20px; 
+
+    .header .logo img {
+        width: 20px;
     }
-    .header .logo a{
+
+    .header .logo a {
         font-size: 13px;
     }
 }
+/*-----------section----------*/
+.testimonials{
+    padding:50px 0 ;
+    background-color: #FFFFFF;
+}
+.testimonials h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+.testimonials .row{
+    gap:40px;
+}
+.testimonial{
+    box-shadow: 0px 8px 8px rgba(0,0, 0, .1);
+    width: calc( (100% - 40px) /2);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.testimonial img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.testimonial .user-info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+.user-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .07px;
+   
+}
+.rating{
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
+}
+@media screen and  (max-width:795px){
+    .testimonials .row{
+        gap:40px;
+    }
+    .testimonial{
+        width: 100%;
+    }
+
+}
+@media screen and (max-width:500px){
+.testimonial .user-data{
+    display: flex;
+   flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+.testimonial .user-info h3,span{
+font-size: small;
+
+}
+.testimonial .user-info img{
+    width: 35px;
+    height: 35px;
+    
+    }
+.rating img{
+    width:15px;
+    height: 14px;
+
+}
+q{
+    font-size: small;
+}
+
+}
 /*-------footer---------------*/
-.footer{
+.footer {
     background-color: #393E46;
     color: #FFFFFF;
     padding: 50px 0;
 }
-.footer-start{
-    width: 520px;
+
+.footer-start {
+    width: calc((100% - 20px) /2);
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
 }
+
 .footer-start .logo {
     display: flex;
     align-items: center;
     gap: 2px;
-    
+
 }
 
 .footer-start .logo img {
@@ -112,98 +207,129 @@ body {
 }
 
 .footer-start .logo a {
-    color:white;
+    color: white;
 }
-.footer-start .icons{
-   display: flex;
-   gap: 15px;
+
+.footer-start .icons {
+    display: flex;
+    gap: 15px;
 }
-.footer-start .icons img{
+
+.footer-start .icons img {
     border: 1px solid #FFFFFF;
     padding: 10px;
     width: 20px;
     height: 20px;
 }
 
-.footer-end{
-   flex-grow: 1;
+.footer-end {
+    width: calc((100% - 20px) /2);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.footer-end a{
-    color:#FFFFFF ;
+
+.footer-end a {
+    color: #FFFFFF;
 }
-.footer-end .footer-item{
+
+.footer-end .footer-item {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     flex-direction: column;
 }
-.footer-end nav{
+
+.footer-end nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
     flex-wrap: wrap;
 }
-@media screen and  (max-width:1200px){
-    .footer .row{
-        gap:10px;
+
+@media screen and (max-width:1200px) {
+    .footer .row {
+        gap: 10px;
     }
-    .footer-start{
+
+    .footer-start {
         width: 100%;
     }
-    .footer-end{
+
+    .footer-end {
         width: 100%;
     }
 }
-@media screen and  (max-width:576px){
+
+@media screen and (max-width:768px) {
     .footer-end {
         display: flex;
         flex-wrap: wrap;
-        
+        width: 100%;
+        gap:10px;
+    }
+    .footer-end .footer-item{
+        width:calc( ( 100% - 10px) /2);
+    }
+
+
+    .footer-start {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+ 
+} 
+ @media screen and (max-width:500px) {
+    .footer-end {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+       
     }
     .footer-start {
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
+        width: 100%;
     }
-    .footer-start .logo img{
-        width:20px; 
+    .footer-start .logo img {
+        width: 20px;
     }
-
-    .footer-start p{
+    
+    .footer-start p {
         font-weight: 1200;
         font-size: small;
         display: flex;
-        
+    
     }
-    .footer-start .icons img{
+    
+    .footer-start .icons img {
         border: .5px solid #FFFFFF;
-    padding: 5px;
-    width: 10px;
-    height: 10px;
-   
+        padding: 5px;
+        width: 10px;
+        height: 10px;
     }
-    .footer-start .logo a{
+    
+    .footer-start .logo a {
         font-size: 13px;
     }
-
-.footer-end .footer-item{
     
-width:100%;
-align-items: center;
-
-}
-.footer-end .footer-item h2{
-    font-weight: 1500;
-    font-size:large;
-}
-.footer-end .footer-item a{
-    font-weight: 1200;
-    font-size: small;
+    .footer-end .footer-item {
     
+        width: 100%;
+        align-items: center;
+    }
+    
+    .footer-end .footer-item h2 {
+        font-weight: 1500;
+        font-size: large;
+      
+    }
+    
+    .footer-end .footer-item a {
+        font-weight: 1200;
+        font-size: small;
+    }
+   } 
 
-}
-
-}
